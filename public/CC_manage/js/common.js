@@ -4,6 +4,16 @@
 
 $(function () {
 
+    /**
+     * 获取地址栏的地址
+     * @returns {*} 返回地址的字符串
+     */
+    function getUrl() {
+        var urlStr = location.pathname.split("/").pop();
+        // urlStr = urlStr.substr(0, urlStr.indexOf("."));
+        return urlStr;
+    }
+
     // 如不是登录页, 请求服务器, 判断是否有登录记录 有就停留 没有就返回登录页
     // 截取当前页面名
     if (getUrl() != "login") {
@@ -18,13 +28,6 @@ $(function () {
             }
         });
     }
-
-    function getUrl() {
-        var urlStr = location.pathname.split("/").pop();
-        // urlStr = urlStr.substr(0, urlStr.indexOf("."));
-        return urlStr;
-    }
-
 
     //禁用加载环
     NProgress.configure({
@@ -95,7 +98,6 @@ $(function () {
                         }
                     }
                 });
-
             });
         });
 
