@@ -16,7 +16,7 @@ $(function () {
 
     // 如不是登录页, 请求服务器, 判断是否有登录记录 有就停留 没有就返回登录页
     // 截取当前页面名
-    if (getUrl() != "login") {
+    if (getUrl() != "login.html") {
         $.ajax({
             type: 'get',
             url: '/employee/checkRootLogin',
