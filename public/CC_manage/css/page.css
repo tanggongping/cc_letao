@@ -138,3 +138,9 @@ aside {
     width: 45%;
     height: 500px;
 }
+
+.table.table-bordered th,
+.table.table-bordered td{
+    text-align: center;
+    vertical-align: middle;
+}
