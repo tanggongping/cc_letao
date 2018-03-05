@@ -40,41 +40,40 @@ $(function () {
 
     // 表单元素
     var $form = $("#form");
+
+
     // 添加分类模块
     $(".js_addCategory").click(function () {
-        $("[name='categoryName']").val();
-        console.log(1);
 
+        $form.data('bootstrapValidator').resetForm(true);
 
+        // 显示状态分类模态框
+        $("#categoryModal").modal("show");
+        //$form.data('bootstrapValidator').updateStatus("categoryName", "NOT_VALIDATED");
 
-        // 验证表单规则
-        $form.bootstrapValidator({
+    });
 
-            // 小图标
-            feedbackIcons: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
+    // 验证表单规则
+    $form.bootstrapValidator({
 
-            // 验证规则
-            fields: {
-                categoryName: {
-                    validators: {
-                        notEmpty: {
-                            message: "请输入一级分类的名称"
-                        }
+        // 小图标
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+
+        // 验证规则
+        fields: {
+            categoryName: {
+                validators: {
+                    notEmpty: {
+                        message: "请输入一级分类的名称"
                     }
                 }
             }
-        });
-        // $form.data('bootstrapValidator').updateStatus("categoryName", "NOT_VALIDATED");
-        // 显示状态分类模态框
-        $("#categoryModal").modal("show");
-
-        $form.data('bootstrapValidator').resetForm(true);
+        }
     });
-
 
 
     // 表单验证成功事件
