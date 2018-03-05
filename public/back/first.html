@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>一级菜单页</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+<aside></aside>
+<main class="lt_main">
+    <div class="topHeader"></div>
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li><a href="#">管理系统</a></li>
+            <li><a href="#">分类管理</a></li>
+            <li class="active">一级菜单</li>
+        </ol>
+        <div class="content">
+            <button class="btn btn-default js_addCategory">添加分类</button>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th width="20%">序号</th>
+                    <th width="80%">分类名称</th>
+                </tr>
+                </thead>
+                <!-- 表格数据 -->
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+            <!-- 分页模块 -->
+            <div class="text-right">
+                <ul id="paginator"></ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- 登录退出模态框 -->
+<div class="i_modal">
+    <div class="modal fade" tabindex="-1" id="myModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                    <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-danger">
+                        <span class="glyphicon glyphicon-info-sign"></span>
+                        您确定要退出后台管理系统吗？
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary btn_logout">退出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 添加分类模态框 -->
+<div class="modal fade" tabindex="-1" id="categoryModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <form id="form">
+                    <div class="form-group">
+                        <input type="text" name="categoryName" class="form-control" placeholder="请输入一级分类的名称">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <!-- form="form表单id": 关联form表单外的input元素 -->
+                <button type="submit" form="form" class="btn btn-primary js_add">添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 表格渲染模板 -->
+<script type="text/html" id="tab-tmp">
+    {{each rows v i}}
+    <tr>
+        <td>{{(page-1)*size + (i + 1)}}</td>
+        <td>{{v.categoryName}}</td>
+    </tr>
+    {{/each}}
+</script>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/nprogress/nprogress.js"></script>
+<script src="js/common.js"></script>
+<script src="js/first.js"></script>
+
+</body>
+</html>
