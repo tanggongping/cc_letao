@@ -146,6 +146,7 @@ aside {
 }
 
 .js_addCategory,
-.js_addSecond{
+.js_addSecond,
+.js_addProduct{
     margin-bottom: 20px;
 }
