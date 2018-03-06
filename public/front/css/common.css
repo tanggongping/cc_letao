@@ -98,6 +98,11 @@ i {
 #it_footer .f_nav li.now p {
   color: darkorange;
 }
+.area_scroll {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
 .price {
   color: red;
 }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>乐淘商城-分类页</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+<!-- 头部 -->
+<header id="lt_header" class="headAndFoot">
+    <a href="javascript: history.go(-1);" class="icon_home">
+        <i class="mui-icon mui-icon-back"></i>
+    </a>
+    <h1>乐淘云购</h1>
+    <a href="#" class="icon_search">
+        <i class="fa fa-search"></i>
+    </a>
+</header>
+<!-- 主体 -->
+<main id="lt_main">
+    <!-- 左侧导航 -->
+    <nav class="aside_categroy_nav area_scroll">
+        <!-- 滚动元素容器 -->
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul>
+                    <!-- aside_nav_tmp -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 右侧品牌分类列表 -->
+    <div class="category_list area_scroll">
+        <!-- 滚动元素容器 -->
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="clearfix">
+                    <!-- category_list_tmp -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- 底部 -->
+<footer id="it_footer" class="headAndFoot">
+    <nav class="f_nav">
+        <ul class="clearfix">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li class="now">
+                <a href="category.html">
+                    <i class="fa fa-bars"></i>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <p>会员中心</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+
+<!-- 左侧导航模板 -->
+<script type="text/html" id="aside_nav_tmp">
+    {{each rows v i}}
+    {{if i === 0}}
+    <li class="now" data-id="{{v.id}}"><a href="javascript:;">{{v.categoryName}}</a></li>
+    {{else}}
+    <li data-id="{{v.id}}"><a href="javascript:;">{{v.categoryName}}</a></li>
+    {{/if}}
+    {{/each}}
+</script>
+
+<!-- 右边品牌分类列表 -->
+<script type="text/html" id="category_list_tmp">
+    {{if rows.length === 0}}
+    <p style="padding: 10px">该分类下没有更多的品牌信息</p>
+    {{/if}}
+
+    {{each rows v}}
+    <li>
+        <a href="javascript:;">
+            <img src="{{v.brandLogo}}" alt="">
+            <p>{{v.brandName}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/category.js"></script>
+</body>
+</html>

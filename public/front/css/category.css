@@ -1,0 +1,32 @@
+.aside_categroy_nav {
+  width: 20%;
+  float: left;
+  background-color: lightpink;
+}
+.aside_categroy_nav li {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-right: 1px solid red;
+  border-bottom: 1px solid red;
+}
+.aside_categroy_nav li a {
+  color: #007aff;
+}
+.aside_categroy_nav li.now {
+  background-color: #fff;
+  border-right: none;
+  border-bottom: none;
+}
+.category_list li {
+  width: 20%;
+  height: 80px;
+  float: left;
+  margin: 0 6.6%;
+  text-align: center;
+}
+.category_list li img {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
