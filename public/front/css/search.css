@@ -1,0 +1,42 @@
+.search_box {
+  position: relative;
+  padding: 10px;
+}
+.search_box input[type='text'] {
+  font-size: 14px;
+  border-radius: 5px;
+  border-color: #007aff;
+  margin-bottom: 0;
+}
+.search_box button[type='button'] {
+  position: absolute;
+  height: 40px;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 5px 5px 0;
+}
+.history_box {
+  padding: 10px;
+  font-size: 14px;
+  color: #666;
+}
+.history_box .title {
+  height: 40px;
+  line-height: 40px;
+}
+.history_box .record_list {
+  border: 1px dashed red;
+}
+.history_box .record_list li {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px dashed red;
+  padding-left: 5px;
+}
+.history_box .record_list li span {
+  display: inline-block;
+  line-height: 40px;
+}
+.history_box .record_list li:last-child {
+  border-bottom: none;
+}

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 html {
   width: 100%;
   height: 100%;
@@ -55,7 +56,7 @@ i {
 .headAndFoot h1 {
   padding: 0 10%;
   height: 100%;
-  font: 20px/50px "Microsoft YaHei";
+  font: 18px/50px "Microsoft YaHei";
   margin: 0;
 }
 .headAndFoot a,

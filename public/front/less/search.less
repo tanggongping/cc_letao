@@ -1,0 +1,52 @@
+.search_box {
+  position: relative;
+  padding: 10px;
+
+  input[type='text'] {
+    font-size: 14px;
+    border-radius: 5px;
+    border-color: #007aff;
+    margin-bottom: 0;
+  }
+
+  button[type='button'] {
+    position: absolute;
+    height: 40px;
+    right: 10px;
+    top: 10px;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.history_box {
+  padding: 10px;
+  font-size: 14px;
+  color: #666;
+
+  .title {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .record_list {
+
+    border: 1px dashed red;
+
+    li {
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px dashed red;
+      padding-left: 5px;
+      //margin-top: -1px;
+
+      span {
+        display: inline-block;
+        line-height: 40px;
+      }
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}
