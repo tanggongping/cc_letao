@@ -79,6 +79,24 @@ i {
   left: auto;
   right: 0;
 }
+#lt_main .product {
+  /* height: 100%; */
+  padding: 10px;
+}
+#lt_main .product .link {
+  width: 48%;
+  float: left;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#lt_main .product .link img {
+  width: 100%;
+}
+#lt_main .product .link:nth-child(odd) {
+  margin-right: 4%;
+}
 #it_footer {
   bottom: 0;
   font-size: 14px;
@@ -108,4 +126,21 @@ i {
 }
 .oldPrice {
   text-decoration: line-through;
+}
+.search_box {
+  position: relative;
+  padding: 10px;
+}
+.search_box input[type='text'] {
+  font-size: 14px;
+  border-radius: 5px;
+  border-color: #007aff;
+  margin-bottom: 0;
+}
+.search_box button[type='button'] {
+  position: absolute;
+  height: 40px;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 5px 5px 0;
 }

@@ -100,7 +100,7 @@ $(function () {
         $('.js_dropdown_text').text(value);
 
         // 把值赋值给隐藏域
-        $("[name='brandId']").val(value);
+        $("[name='brandId']").val(id);
 
         // 更新字段的状态为成功
         $('#form').data('bootstrapValidator').updateStatus("brandId", "VALID");
@@ -249,7 +249,7 @@ $(function () {
         param += '&picName1=' + imgURLArr[0].picName + '&picAddr1=' + imgURLArr[0].picAddr;
         param += '&picName2=' + imgURLArr[1].picName + '&picAddr2=' + imgURLArr[1].picAddr;
         param += '&picName3=' + imgURLArr[2].picName + '&picAddr3=' + imgURLArr[2].picAddr;
-        
+
         $.ajax({
             type: 'post',
             url: '/product/addProduct',
@@ -259,7 +259,7 @@ $(function () {
                     // 清除表单默认和内容
                     $('#form').data('bootstrapValidator').resetForm(true);
                     $('.js_dropdown_text').text('请选择二级分类');
-                    $('.img_box img').remove();
+                    $('.js_img_box img').remove();
 
                     //重新渲染
                     page = 1;

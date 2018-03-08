@@ -55,7 +55,7 @@ $(function () {
     // jquery load方法 引入通用模块
     $("aside").load("./aside.html .lt_aside");
 
-    $(".lt_main .topHeader").load("./topBar.ht/ml .topBar");
+    $(".lt_main .topHeader").load("./topBar.html .topBar");
 
 
     // jquery load页面还没加载完成, 获取不到元素.

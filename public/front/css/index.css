@@ -8,20 +8,3 @@
 #lt_main .i_nav li img {
   width: 100%;
 }
-#lt_main .product {
-  padding: 10px;
-}
-#lt_main .product .link {
-  width: 48%;
-  float: left;
-  padding: 10px;
-  border: 1px solid #ccc;
-  text-align: center;
-  margin-bottom: 10px;
-}
-#lt_main .product .link img {
-  width: 100%;
-}
-#lt_main .product .link:nth-child(odd) {
-  margin-right: 4%;
-}

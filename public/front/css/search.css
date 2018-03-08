@@ -1,20 +1,3 @@
-.search_box {
-  position: relative;
-  padding: 10px;
-}
-.search_box input[type='text'] {
-  font-size: 14px;
-  border-radius: 5px;
-  border-color: #007aff;
-  margin-bottom: 0;
-}
-.search_box button[type='button'] {
-  position: absolute;
-  height: 40px;
-  right: 10px;
-  top: 10px;
-  border-radius: 0 5px 5px 0;
-}
 .history_box {
   padding: 10px;
   font-size: 14px;
