@@ -20,14 +20,14 @@ $(document).ajaxStop(function () {
 
 
 //非登陆页面，判断当前用户是否是登录了，如果登录了，就继续，如果没登陆，需要跳转到登录页面。
-if(location.href.indexOf("login.html") == -1){
+if(location.href.indexOf("userLogin.html") == -1){
   $.ajax({
     type:"get",
     url:"/employee/checkRootLogin",
     success:function (data) {
       if(data.error === 400){
         //说明用户没有登录，跳转到登录页面
-        location.href = "login.html";
+        location.href = "userLogin.html";
       }
     }
   })
@@ -63,7 +63,7 @@ $(".icon_logout").on("click", function () {
       success:function (data) {
         if(data.success){
           //退出成功
-          location.href = "login.html";
+          location.href = "userLogin.html";
         }
       }
     });

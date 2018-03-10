@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta charset="UTF-8">
-    <title>乐淘商城-购物车</title>
+    <title>乐淘商城-登录</title>
     <link rel="stylesheet" href="lib/mui/css/mui.css">
-    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/cart.css">
 </head>
 <body>
 <!-- 头部 -->
 <header id="lt_header" class="headAndFoot">
-    <a href="index.html" class="icon_home">
+    <a href="javascript: history.go(-1);" class="icon_home">
         <i class="mui-icon mui-icon-arrowleft"></i>
     </a>
-    <h1>购物车</h1>
+    <h1>登录</h1>
 </header>
-
 <!-- 主体 -->
 <main id="lt_main" class="area_scroll">
-    <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-
+    <!-- 表单 -->
+    <form class="mui-input-group">
+        <div class="mui-input-row">
+            <label>用户名</label>
+            <input type="text" class="mui-input-clear" name="username" autoComplete="off" placeholder="请输入用户名">
         </div>
+        <div class="mui-input-row">
+            <label>密码</label>
+            <input type="password" class="mui-input-password" name="password" placeholder="请输入密码">
+        </div>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn mui-btn-danger" >重置</button>
+            <button type="button" class="mui-btn mui-btn-primary btn_login" >登录</button>
+        </div>
+    </form>
+    <div class="register mui-pull-right">
+        <a href="register.html">免费注册</a>
     </div>
 </main>
 <!-- 底部 -->
@@ -43,14 +54,14 @@
                     <p>分类</p>
                 </a>
             </li>
-            <li class="now">
-                <a href="catr.html">
+            <li>
+                <a href="cart.html">
                     <i class="fa fa-shopping-cart"></i>
                     <p>购物车</p>
                 </a>
             </li>
-            <li>
-                <a href="user.html">
+            <li class="now">
+                <a href="userLogin.html">
                     <i class="fa fa-user"></i>
                     <p>会员中心</p>
                 </a>
@@ -59,5 +70,10 @@
     </nav>
 </footer>
 
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

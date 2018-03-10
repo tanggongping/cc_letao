@@ -3,10 +3,10 @@
  */
 
 $(function () {
-    var historyArr = ['耐克', '阿迪', '新百伦'];
-    var historyStr = JSON.stringify(historyArr);
-    // 存储本地
-    localStorage.setItem('history', historyStr);
+    // var historyArr = ['耐克', '阿迪', '新百伦'];
+    // var historyStr = JSON.stringify(historyArr);
+    // // 存储本地
+    // localStorage.setItem('history', historyStr);
 
 
     // 历史记录容器 因为要多次操作, 定个变量存起来, 减少DOM操作.

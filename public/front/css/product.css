@@ -1,0 +1,33 @@
+.currnent {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.oldPrice {
+  color: #666;
+  font-size: 12px;
+}
+.pro_size span {
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 30px;
+}
+.pro_size span.active {
+  background-color: orange;
+}
+.pro_num span {
+  color: #666;
+  font-size: 12px;
+}
+.go_cart {
+  width: 100%;
+  height: 50px;
+  line-height: 30px;
+  padding: 10px;
+  border-top: 1px solid red;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  font-size: 14px;
+}

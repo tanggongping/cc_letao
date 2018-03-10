@@ -10,7 +10,7 @@ $(function () {
     success:function (info) {
 
       if(info.error=== 400){
-        location.href = "login.html";
+        location.href = "userLogin.html";
       }
 
       //直接渲染用户信息
@@ -31,7 +31,7 @@ $(function () {
       url:"/user/logout",
       success:function (info) {
         if(info.success) {
-          location.href = "login.html";
+          location.href = "userLogin.html";
         }
       }
     });

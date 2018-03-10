@@ -94,7 +94,7 @@ $(function () {
         if(info.success){
           mui.toast("恭喜你，注册成功了，一秒后跳转到登录页");
           setTimeout(function () {
-            location.href = "login.html";
+            location.href = "userLogin.html";
           }, 1000);
         }
       }

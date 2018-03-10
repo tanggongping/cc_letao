@@ -418,8 +418,7 @@ a:active
 .mui-table-cell
 {
     position: relative;
-
-    display: table-cell;
+    display: block;
 }
 
 .mui-text-left
@@ -2254,18 +2253,15 @@ input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled,
 }
 .mui-table-view-cell:after
 {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 15px;
-
-    height: 1px;
-
-    content: '';
-    -webkit-transform: scaleY(.5);
-            transform: scaleY(.5);
-
-    background-color: #c8c7cc;
+    /* position: absolute; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* left: 15px; */
+    /* height: 1px; */
+    /* content: ''; */
+    /* -webkit-transform: scaleY(.5); */
+    /* transform: scaleY(.5); */
+    /* background-color: #c8c7cc; */
 }
 .mui-table-view-cell.mui-radio input[type=radio], .mui-table-view-cell.mui-checkbox input[type=checkbox]
 {
@@ -2938,28 +2934,22 @@ select:focus
     right: 0;
     bottom: 0;
     left: 0;
-
     height: 1px;
-
-    content: '';
+    /* content: ''; */
     -webkit-transform: scaleY(.5);
-            transform: scaleY(.5);
-
+    transform: scaleY(.5);
     background-color: #c8c7cc;
 }
 .mui-input-group:before
 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-
-    height: 1px;
-
-    content: '';
+    /* position: absolute; */
+    /* top: 0; */
+    /* right: 0; */
+    /* left: 0; */
+    /* height: 1px; */
+    /* content: ''; */
     -webkit-transform: scaleY(.5);
-            transform: scaleY(.5);
-
+    transform: scaleY(.5);
     background-color: #c8c7cc;
 }
 
@@ -2967,12 +2957,12 @@ select:focus
 .mui-input-group textarea
 {
     margin-bottom: 0;
-
     border: 0;
     border-radius: 0;
     background-color: transparent;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
+    ne; */
 }
 
 .mui-input-group input[type='search']
@@ -3014,13 +3004,10 @@ select:focus
     right: 0;
     bottom: 0;
     left: 15px;
-
     height: 1px;
-
-    content: '';
+    /* content: ''; */
     -webkit-transform: scaleY(.5);
-            transform: scaleY(.5);
-
+    transform: scaleY(.5);
     background-color: #c8c7cc;
 }
 
@@ -4490,6 +4477,7 @@ body > .mui-progressbar
 .mui-slider .mui-slider-group .mui-slider-item img
 {
     width: 100%;
+    /* height: 100%; */
 }
 .mui-slider .mui-slider-group .mui-slider-item .mui-table-view:before, .mui-slider .mui-slider-group .mui-slider-item .mui-table-view:after
 {
@@ -5602,5 +5590,4 @@ body > .mui-progressbar
     width: 100%;
     height: 100%;
 
-    border: 0;
-}
+    border: 0

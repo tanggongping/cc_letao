@@ -13,7 +13,9 @@ body {
 }
 body,
 ul,
-li {
+li,
+h1,
+h3 {
   margin: 0;
   padding: 0;
 }

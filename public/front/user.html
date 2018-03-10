@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta charset="UTF-8">
-    <title>乐淘商城-搜索页</title>
+    <title>乐淘商城-登录</title>
     <link rel="stylesheet" href="lib/mui/css/mui.css">
-    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/search.css">
+    <style>
+        .login_out {
+            padding: 10px;
+        }
+
+        .login_out a {
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
 <!-- 头部 -->
@@ -16,22 +29,32 @@
     <a href="javascript: history.go(-1);" class="icon_home">
         <i class="mui-icon mui-icon-arrowleft"></i>
     </a>
-    <h1>搜索中心</h1>
+    <h1>会员中心</h1>
 </header>
 <!-- 主体 -->
 <main id="lt_main" class="area_scroll">
-    <!-- 滚动元素 -->
-    <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-            <div class="search_box">
-                <input type="text" id="" placeholder="请输入搜索关键字">
-                <button type="button" class="mui-btn mui-btn-primary js_btn_search">搜索</button>
-            </div>
-            <div class="history_box">
-                <!-- history-tmp -->
-            </div>
-        </div>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell mui-media userinfo">
+            <a href="javascript:;">
+                <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+                <div class="mui-media-body">
+                </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">账号与安全</a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a href="cart.html" class="mui-navigate-right">我的购物车</a>
+        </li>
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">收获地址管理</a>
+        </li>
+    </ul>
+    <div class="login_out">
+        <a href="javascript:;" class="js_login_out">退出</a>
     </div>
+
 </main>
 <!-- 底部 -->
 <footer id="it_footer" class="headAndFoot">
@@ -55,7 +78,7 @@
                     <p>购物车</p>
                 </a>
             </li>
-            <li>
+            <li class="now">
                 <a href="user.html">
                     <i class="fa fa-user"></i>
                     <p>会员中心</p>
@@ -65,31 +88,15 @@
     </nav>
 </footer>
 
-
-<!-- 历史记录列表渲染 -->
-<script type="text/html" id="history-tmp">
-    {{if list.length === 0}}
-    <p>没有历史记录</p>
-    {{else}}
-    <div class="title clearfix">
-        <span class="mui-pull-left">搜索历史</span>
-        <span class="mui-pull-right js_clear_history"><i class="fa fa-trash"></i>清空记录</span>
-    </div>
-    <ul class="record_list">
-        {{each list v i}}
-        <li class="clearfix">
-            <a href="searchList.html?proName={{v}}" class="mui-pull-left">{{v}}</a>
-            <span class="mui-icon mui-icon-closeempty mui-pull-right js_btn_delete" data-index="{{i}}"></span>
-        </li>
-        {{/each}}
-    </ul>
-    {{/if}}
+<script type="text/html" id="info-tmp">
+    {{username}}
+    <p class="mui-ellipsis">绑定手机:{{mobile}}</p>
 </script>
 
+<script src="lib/mui/js/mui.min.js"></script>
 <script src="lib/zepto/zepto.min.js"></script>
-<script src="lib/mui/js/mui.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
-<script src="js/search.js"></script>
+<script src="js/user.js"></script>
 </body>
 </html>

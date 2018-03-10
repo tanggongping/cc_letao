@@ -118,6 +118,21 @@ $(function () {
         $('.sort_list li.now').removeClass('now')
             .find('i').removeClass('fa-angle-up').addClass('fa-angle-down');
 
+        // 将搜索的记录存储在历史记录中
+        var tempStr = localStorage.getItem('history') || '[]';
+        var tempArr = JSON.parse(tempStr);
+        var index = tempArr.indexOf(URLParam);
+        if (index != -1) {
+            tempArr.splice(index, 1);
+        }
+
+        if (tempArr.length >= 10) {
+            tempArr.pop();
+        }
+
+        tempArr.unshift(URLParam);
+
+        localStorage.setItem('history', JSON.stringify(tempArr));
 
         // 下拉刷新一次
         mui(".mui-scroll-wrapper").pullRefresh().pulldownLoading();

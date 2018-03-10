@@ -1,0 +1,32 @@
+.mui-input-group {
+  padding: 10px;
+}
+.mui-input-group .mui-input-row {
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.mui-input-group .vcode {
+  border: none;
+  position: relative;
+}
+.mui-input-group .vcode input {
+  border: 1px solid #ccc;
+  width: 65%;
+}
+.mui-input-group .vcode .get_Vcode {
+  position: absolute;
+  width: 30%;
+  right: 2px;
+  top: 0;
+  text-align: center;
+}
+.mui-input-group .vcode .get_Vcode.disabled {
+  border-color: #999;
+  background-color: #999;
+}
+.mui-input-group .btn_register {
+  width: 100%;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>乐淘商城-购物车</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+<!-- 头部 -->
+<header id="lt_header" class="headAndFoot">
+    <a href="index.html" class="icon_home">
+        <i class="mui-icon mui-icon-arrowleft"></i>
+    </a>
+    <h1>购物车</h1>
+</header>
+
+<!-- 主体 -->
+<main id="lt_main" class="area_scroll">
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <ul class="product_wrap">
+                <!-- cart_list_tmp -->
+                <!-- <li class="mui-table-view-cell mui-transitioning">
+                     &lt;!&ndash; 左滑显示多功能菜单 &ndash;&gt;
+                     <div class="mui-slider-right mui-disabled">
+                         <a class="mui-btn mui-btn-blue mui-icon mui-icon-compose"></a>
+                         <a class="mui-btn mui-btn-red mui-icon mui-icon-trash"></a>
+                     </div>
+                     &lt;!&ndash; 主体内容 &ndash;&gt;
+                     <div class="mui-slider-handle">
+                         <div class="mui-table-cell">
+                             <div class="item clearfix">
+                                 <div class="pic">
+                                     <img src="images/product.jpg" alt="">
+                                 </div>
+                                 <div class="details">
+                                     <h3>耐克111111111111111111</h3>
+                                     <p>
+                                         <span class="price">&yen;111</span>
+                                         <span class="oldPrice">&yen;1111</span>
+                                         <span class="num">1双</span>
+                                     </p>
+                                     <div class="size">鞋码: 39</div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <input type="checkbox" class="ck">
+                 </li>-->
+            </ul>
+        </div>
+    </div>
+    </li>
+    </div>
+    </div>
+</main>
+
+<!-- 金额订单 -->
+<div class="money_indent">
+    <span class="total_money mui-pull-left">订单总金额 ￥ <span>00.00</span></span>
+    <a href="#" class="mui-pull-right">生成订单</a>
+</div>
+
+<!-- 底部 -->
+<footer id="it_footer" class="headAndFoot">
+    <nav class="f_nav">
+        <ul class="clearfix">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.html">
+                    <i class="fa fa-bars"></i>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li class="now">
+                <a href="catr.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <i class="fa fa-user"></i>
+                    <p>会员中心</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+
+<!-- 购物车商品列表模块 -->
+<script type="text/html" id="cart_list_tmp">
+    {{if data.length === 0}}
+        <p>购物车没有商品, 赶紧去剁手吧</p>
+    {{/if}}
+    {{each data v i}}
+    <li class="mui-table-view-cell mui-transitioning">
+        <!-- 左滑显示多功能菜单 -->
+        <div class="mui-slider-right mui-disabled">
+            <a class="mui-btn mui-btn-blue mui-icon mui-icon-compose js_btn_update" data-id="{{v.id}}"></a>
+            <a class="mui-btn mui-btn-red mui-icon mui-icon-trash js_btn_delete" data-id="{{v.id}}"></a>
+        </div>
+        <!-- 主体内容 -->
+        <div class="mui-slider-handle">
+            <div class="mui-table-cell">
+                <div class="item clearfix">
+                    <div class="pic">
+                        <img src="{{v.pic[0].picAddr}}" alt="">
+                    </div>
+                    <div class="details">
+                        <h3>{{v.proName}}</h3>
+                        <p>
+                            <span class="price">&yen;{{v.price}}</span>
+                            <span class="oldPrice">&yen;{{v.oldPrice}}</span>
+                            <span class="num">{{v.num}}双</span>
+                        </p>
+                        <div class="size">鞋码: {{v.size}}</div>
+                    </div>
+                    <input type="checkbox" class="ck" data-price="{{v.price}}" data-num="{{v.num}}">
+                </div>
+            </div>
+        </div>
+
+    </li>
+    {{/each}}
+</script>
+
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</body>
+</html>

@@ -22,7 +22,7 @@ $(function () {
               setTimeout(function () {
                 if (info.error === 400) {
                   //没登录，跳转到登录页面 , 登录成功需要回跳
-                  location.href = "login.html?retUrl=" + location.href;
+                  location.href = "user.html?retUrl=" + location.href;
                 }
                 //获取到的购物车数据是一个数组，渲染到页面中, info是一个数组
                 $(".mui-table-view").html(template("tpl", {list: info}));
