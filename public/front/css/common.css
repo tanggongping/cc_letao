@@ -145,3 +145,16 @@ i {
   top: 10px;
   border-radius: 0 5px 5px 0;
 }
+.pro_size span {
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 30px;
+}
+.pro_size span.active {
+  background-color: orange;
+}
+.pro_num span {
+  color: #666;
+  font-size: 12px;
+}
